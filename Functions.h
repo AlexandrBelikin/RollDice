@@ -5,11 +5,11 @@
 using namespace std;
 
 void Brosok1() {
-	std::cout << "Êîë-âî êóáèêîâ: ";
+	std::cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÐºÑƒÐ±Ð¸ÐºÐ¾Ð²: ";
 	std::cin >> kol_vo_kubov;
-	std::cout << "Ìîäèôèêàòîð: ";
+	std::cout << "ÐœÐ¾Ð´Ð¸Ñ„Ð¸ÐºÐ°Ñ‚Ð¾Ñ€: ";
 	std::cin >> modificator;
-	cout << "Âûïàâøèå êóáèêè: " << endl;
+	cout << "Ð’Ñ‹Ð¿Ð°Ð²ÑˆÐ¸Ðµ ÐºÑƒÐ±Ð¸ÐºÐ¸: " << endl;
 
 
 
@@ -29,7 +29,7 @@ void Brosok1() {
 		cout << ") ";
 		cout << "[" << modificator << "]" ;
 		pulaDMG += modificator;
-		cout << " = " << pulaDMG <<" " << "çîíà ïîïàäàíèÿ(ïîêà íå ñäåëàë ñòðóêòóð): " << ZonaVremenno << endl << endl;
+		cout << " = " << pulaDMG <<" " << "Ð·Ð¾Ð½Ð° Ð¿Ð¾Ð¿Ð°Ð´Ð°Ð½Ð¸Ñ(Ð¿Ð¾ÐºÐ° Ð½Ðµ ÑÐ´ÐµÐ»Ð°Ð» ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€): " << ZonaVremenno << endl << endl;
 		sumdice += pulaDMG;
 		pulaDMG = 0;
 
@@ -38,13 +38,13 @@ void Brosok1() {
 
 
 	damage = sumdice;
-	cout << endl << "Óðîí: " << damage << endl;
+	cout << endl << "Ð£Ñ€Ð¾Ð½: " << damage << endl;
 	kubik = 0;
 	kol_vo_kubov = 0;
 }
 
 void BrosokNavik() {
-	cout<<endl << "Ââåäèòå çíà÷åíèå íàâûêà: ";
+	cout<<endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð½Ð°Ð²Ñ‹ÐºÐ°: ";
 	cin >> protiv;
 	cout << endl << endl;
 	for (int i = 0; i < kol_vo_kubov; i++) {
@@ -55,12 +55,12 @@ void BrosokNavik() {
 		kubik = 0;
 	}
 	uspehi = protiv - sumdice;
-	cout << endl << "Ñóììà êóáèêîâ: " << sumdice << endl;
+	cout << endl << "Ð¡ÑƒÐ¼Ð¼Ð° ÐºÑƒÐ±Ð¸ÐºÐ¾Ð²: " << sumdice << endl;
 	if (sumdice > protiv) {
-		cout <<endl<< "Ïðîâàë!" << endl << "Êîë-âî óñïåõîâ: " << uspehi << endl;
+		cout <<endl<< "ÐŸÑ€Ð¾Ð²Ð°Ð»!" << endl << "ÐšÐ¾Ð»-Ð²Ð¾ ÑƒÑÐ¿ÐµÑ…Ð¾Ð²: " << uspehi << endl;
 	}
 	else if (sumdice <= protiv) {
-		cout <<endl<< "Óñïåõ!" << endl << "Êîë-âî óñïåõîâ: " << uspehi << endl;
+		cout <<endl<< "Ð£ÑÐ¿ÐµÑ…!" << endl << "ÐšÐ¾Ð»-Ð²Ð¾ ÑƒÑÐ¿ÐµÑ…Ð¾Ð²: " << uspehi << endl;
 	}
 }
 
@@ -68,12 +68,12 @@ void CritCheck() {
 	if (sumdice <= 4) {
 		critsuccess = true;
 		critfail = false;
-		cout<<endl << "Êðèò: óñïåõ" << endl;
+		cout<<endl << "ÐšÑ€Ð¸Ñ‚: ÑƒÑÐ¿ÐµÑ…" << endl;
 	}
 	else if (sumdice >= 17) {
 		critfail = true;
 		critsuccess = false;
-		cout << "Êðèò: ïðîâàë" << endl;
+		cout << "ÐšÑ€Ð¸Ñ‚: Ð¿Ñ€Ð¾Ð²Ð°Ð»" << endl;
 	}
 	else {
 		critsuccess = false;
@@ -82,7 +82,7 @@ void CritCheck() {
 }
 
 void Vibor_deystviya() {
-	cout << "Âûáåðèòå äåéñòâèå:" << endl << "N)Áðîñîê íàâûêà D)Áðîñîê óðîíà " << endl << "Âàø âûáîð: ";
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << endl << "N)Ð‘Ñ€Ð¾ÑÐ¾Ðº Ð½Ð°Ð²Ñ‹ÐºÐ° D)Ð‘Ñ€Ð¾ÑÐ¾Ðº ÑƒÑ€Ð¾Ð½Ð° " << endl << "Ð’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€: ";
 	cin >> input;
 	cout << endl << endl;
 	if (input == 'N') {
@@ -91,14 +91,14 @@ void Vibor_deystviya() {
 		CritCheck();
 	}
 	 else if (input == 'D') {
-		cout << "Ââåäèòå êîë-âî ïóëü: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ Ð¿ÑƒÐ»ÑŒ: ";
 		cin >> puliAMOUNT;
 		cout << endl<<endl;
 		Brosok1();
 	}
 	 else if(input == 'E'){
 		 cout << endl << endl << endl << "--------------------------------------------------------------------------------" << endl << endl;
-		 cout << "Äî ñâèäàíèÿ " << PlayerName << "!";
+		 cout << "Ð”Ð¾ ÑÐ²Ð¸Ð´Ð°Ð½Ð¸Ñ " << PlayerName << "!";
 		 Sleep(1000);
 		 exit(0);
 	 }
