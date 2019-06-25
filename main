@@ -20,13 +20,7 @@ int main()
 	
 	srand(time(NULL));
 	setlocale(LC_ALL, "rus");
-	cout << "ALERT: сорян, це консоль поэтому придётся вечно жмакать ENTER, Славик не ругайся";
-	Sleep(4000);
-	system("CLS");
-	cout << "Освоение QT в процессе, скоро начну пилить интерфейс" << endl;
-	Sleep(4000);
-	system("CLS");
-	cout << "Введите имя игрока(на англ русккий ещё не допилил)" << endl << "(Если хочешь выйти введи E)" << endl;
+	cout << "(Если хотите выйти введите E)" << endl;
 	cin >> PlayerName;
 	if (PlayerName == "E") {
 		goto Exit;
@@ -40,12 +34,12 @@ int main()
 	input = '1';
 	sumdice = 0;
 	kol_vo_kubov = 0;
-	cout << "1)Для для выбора действия введи B" << endl << "2)Для завершения нажмите введи E"<< endl << "Ввод: ";
+	cout << "1)Для для выбора действия введите B" << endl << "2)Для завершения нажмите введите E"<< endl << "Ввод: ";
 	cin >> input;
 	cout << endl << endl;
 	if (input == 'B') {
 		Vibor_deystviya();
-		cout<<endl << endl << "------------------------------------------------------------" << endl << endl << "Для продолжения нажми Y" << endl << "Для выхода нажми N"<<endl;
+		cout<<endl << endl << "------------------------------------------------------------" << endl << endl << "Для продолжения нажмите Y" << endl << "Для выхода нажми N"<<endl;
 		Error:
 		cin >> input;
 		if (input == 'Y') {
