@@ -29,7 +29,7 @@ void Brosok1() {
 		cout << ") ";
 		cout << "[" << modificator << "]" ;
 		pulaDMG += modificator;
-		cout << " = " << pulaDMG <<" " << "зона попадания(пока не сделал структур): " << ZonaVremenno << endl << endl;
+		cout << " = " << pulaDMG <<" " << "зона попадания: " << ZonaVremenno << endl << endl;
 		sumdice += pulaDMG;
 		pulaDMG = 0;
 
