@@ -1,0 +1,73 @@
+// ConsoleApplication1.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include <Windows.h>
+#include <iostream>
+#include <istream>
+#include <array>
+#include <clocale>
+#include <ctime>
+#include <conio.h>
+#include "peremenie.h"
+#include "Functions.h"
+#include "Stuctures.h"
+using namespace std;
+
+#pragma once
+int main()
+{
+	
+	srand(time(NULL));
+	setlocale(LC_ALL, "rus");
+	cout << "ALERT: сорян, це консоль поэтому придётся вечно жмакать ENTER, Славик не ругайся";
+	Sleep(4000);
+	system("CLS");
+	cout << "Освоение QT в процессе, скоро начну пилить интерфейс" << endl;
+	Sleep(4000);
+	system("CLS");
+	cout << "Введите имя игрока(на англ русккий ещё не допилил)" << endl << "(Если хочешь выйти введи E)" << endl;
+	cin >> PlayerName;
+	if (PlayerName == "E") {
+		goto Exit;
+	}
+	cout << endl << endl << "Добро пожаловать " << PlayerName << endl << endl << endl;
+
+
+
+
+	START:
+	input = '1';
+	sumdice = 0;
+	kol_vo_kubov = 0;
+	cout << "1)Для для выбора действия введи B" << endl << "2)Для завершения нажмите введи E"<< endl << "Ввод: ";
+	cin >> input;
+	cout << endl << endl;
+	if (input == 'B') {
+		Vibor_deystviya();
+		cout<<endl << endl << "------------------------------------------------------------" << endl << endl << "Для продолжения нажми Y" << endl << "Для выхода нажми N"<<endl;
+		Error:
+		cin >> input;
+		if (input == 'Y') {
+			system("CLS");
+			goto START;
+		}
+		else if(input == 'N') {
+			 cout << endl << endl << "-----------------------------------------------------------" << endl << endl << "До свидания " << PlayerName << "!" << endl;
+			 Sleep(1000);
+			 Exit :
+			exit(0);
+		}
+		else {
+			cout << endl << endl << "Неверный символ" << endl;
+			goto Error;
+		}
+	}
+
+	else if (input == 'E') {
+		cout<<endl << endl << "-------------------------------------------------------------"<<endl << endl << "До свидания " << PlayerName << "!";
+		Sleep(1000);
+	}
+	 return 0;
+}
+
